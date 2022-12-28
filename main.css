@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(93, 155, 98);
+    margin: 100px;
+}
+.wrapper{
+    background-color: rgb(150, 117, 117);
+    width: 1500px;
+    height: 900px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    
+    }
+.container__1{
+    background-color: brown;
+    height: 100px;
+    width: 150px;
+    transition:  color 5s;
+    /* transition: background-color 5s; 
+    transition: width 5s ease; */
+    transition: background-color 5s, color 5s, width 5s;
+    order: 1;
+}
+.container__2{
+    background-color: aqua;
+    height: 100px;
+    width: 150px;
+    animation: example 5s ease-in-out 1s infinite alternate-reverse;
+}
+.container__3{
+    background-color: blue;
+    height: 100px;
+    width: 150px;
+    animation: rotation 5s infinite ;
+}
+.container__4{
+    background-color: blueviolet;
+    height: 100px;
+    width: 150px;
+}
+.container__4::before{
+    content: "Вонючка ";
+    color: azure;
+    animation: example 5s ease-in-out 1s infinite alternate-reverse;
+
+}
+.container__5{
+    background-color: rgb(36, 158, 56);
+    height: 100px;
+    width: 150px;
+    position: sticky;
+    top: 50px;
+    left: 0;
+}
+.container__1:hover{
+    background-color: azure;
+    color: rgb(0, 255, 98);
+    width: 600px;
+}
+button{
+    height: 100px;
+    width: 150px;
+    text-align: center;
+    transition: padding-left 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    order: -1;
+    }
+button:hover{
+    padding-left: 300px;
+}
+@keyframes example {
+0% {width: 150x;}
+50% {
+width: 250px;
+opacity: 1;
+}
+100%{
+    width: 350px;
+    opacity: 0;
+}
+}
+
+@keyframes rotation {
+    0%{
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.1);
+        transform:rotate(360deg)
+    }
+}
+.asert{
+    
+}
